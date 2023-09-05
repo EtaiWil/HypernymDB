@@ -1,11 +1,5 @@
-#HypernymDB
+# HypernymDB
 
-## Table of Contents
-* [General Info](#general-information)
-* [Setup](#setup)
-* [Built With](#built-with)  <!-- Corrected anchor link -->
-* [Contact](#author)  <!-- Corrected anchor link -->
-* [Support](#support)  <!-- Corrected anchor link -->
 
 
 
