@@ -3,15 +3,10 @@
 ## Table of Contents
 ## Table of Contents
 * [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
+* [Built With](#Built With)
 * [Contact](#contact)
+* [Support](#Support)
 
 
 
@@ -97,7 +92,7 @@ we can see that the  program used the data and identified that "banana" is some 
 - Java
 
 
-## Author ##
+## Author 
 
 **Etai Wilentzik**
 
@@ -105,7 +100,7 @@ we can see that the  program used the data and identified that "banana" is some 
 - [Email](mailto:etaiwil2000@gmail.com?subject=Hi "Hi!")
 - [LinkedIn](https://www.linkedin.com/in/etai-wilentzik-b5a106212/ "Welcome")
 
-## 🤝 Support
+## Support 🤝 
 
 Contributions, issues, and feature requests are welcome!
 
