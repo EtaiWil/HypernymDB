@@ -51,7 +51,7 @@ The patterns I identified are ({} means optionally):
 ```
 git clone https://github.com/EtaiWil/HypernymDB.git
 ```
-2. Download the corpus from [here](https://drive.google.com/drive/folders/11aVnX9r-k5iy2GafZd-o5lBBgeNRuFDN?usp=sharing)
+2. Download the corpus from [here](https://drive.google.com/file/d/1knTy0gYblqEZaSFWsHxk2NgOM59mwolP/view?usp=sharing)
 3. Download Apache Ant from [here](https://ant.apache.org/bindownload.cgi) to use the build file to compile and run the program.
 4. Open the terminal in the folder that contains the build files and the src folder and enter `ant clean ` then 
  to compile:
