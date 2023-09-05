@@ -1,11 +1,17 @@
 #HypernymDB
 
 ## Table of Contents
+## Table of Contents
 * [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Screenshots](#screenshots)
 * [Setup](#setup)
-* [Build with ](#Built With)
-* [Contact](#Author)
-* [Support](#Support)
+* [Usage](#usage)
+* [Project Status](#project-status)
+* [Room for Improvement](#room-for-improvement)
+* [Acknowledgements](#acknowledgements)
+* [Contact](#contact)
 
 
 
