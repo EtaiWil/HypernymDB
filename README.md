@@ -1,102 +1,106 @@
-# Project Name
-> Outline a brief description of your project.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+#HypernymDB
 
 ## Table of Contents
 * [General Info](#general-information)
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
-* [Usage](#usage)
-* [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
-* [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
+* [Build with ](#Built With)
+* [Contact](#Author)
+* [Support](#Support)
+
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+This Java software uses Hearst patterns, a collection of lexical and syntactic patterns, to extract hypernym-hyponym links between noun phrases. Hearst patterns are used to identify hypernymy interactions. The computer extracts hypernym-hyponym pairs from a given text corpus by identifying Hearst patterns using regular expression matching and string manipulation techniques.
+the collection of words contain  5GB corpus which was edited before and added a <np> and </np> tags on every Noun Phrase,
+then by using String manipulations (to optimize search) and regex matching of 5 different Hearst Patterns it creates a Database of Hypernyms and Hyponyms.
+for each Hyponym we count how many times it appeared in the corpus in different patterns.
 
+The patterns I identified are ({} means optionally):
 
-## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+1. `NP {,} such as NP {, NP, ..., {and|or} NP}`.
+   In this pattern, the first NP is the hypernym and the NPs after the words "such as" are hyponyms.
+   Example: "semitic languages such as Hebrew or Arabic are composed of consonants and voyels"
+   semitic language ⟶ Hebrew
+   semitic language ⟶ Arabic
 
+2. `such NP as NP {, NP, ..., {and|or} NP}`.
+   Here again, the first NP is the hypernym and the NPs after the words "as" are hyponyms.
+   Example: "courses taught by such lecturers as Hemi, Arie, and Hodyah are great"
+   lecturers ⟶ Hemi
+   lecturers ⟶ Arie
+   lecturers ⟶ Hodyah
 
-## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+3. `NP {,} including NP {, NP, ..., {and|or} NP}`
+   Here again, the first NP is the hypernym and the NPs after the words "including" are hyponyms.
 
+4. `NP {,} especially NP {, NP, ..., {and|or} NP}`
+   Here again, the first NP is the hypernym and the NPs after the words "especially" are hyponyms.
 
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+5. `NP {,} which is {{an example|a kind|a class} of} NP`
+   Here, the first NP is the hyponym and the second in a hypernym. Example: "Object oriented programming, which is an example of a computer science course" You should accept the following: (the "," is optionally)
+
+- NP {,} which is NP
+- NP {,} which is an example of NP
+- NP {,} which is a kind of NP
+- NP {,} which is a class of NP
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+1. Clone the repository:
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+```
+git clone https://github.com/EtaiWil/HypernymDB.git
+```
+2. Download the corpus from [here](https://drive.google.com/drive/folders/11aVnX9r-k5iy2GafZd-o5lBBgeNRuFDN?usp=sharing)
+3. Download Apache Ant from [here](https://ant.apache.org/bindownload.cgi) to use the build file to compile and run the program.
+4. Open the terminal in the folder that contains the build files and the src folder and enter `ant clean ` then 
+ to compile:
 
+```
+ant compile 
+```
 
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+To run on a corpus and get the whole database into a file enter:
 
-`write-your-code-here`
+```
+ant run1 -Dargs="<First argument - The directory of the corpus> <Second argument- name for the new output file>"  
+```
+for example:
 
-
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
-
-
-## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-
-## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
-
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
-
-
-# HypernymDB
-this project made in my course in oop. 
-this is how to run the code.
 ![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/b217be72-dfc7-4fc4-b3d2-4b14179f8db5)
-this is the file the code write to.
-![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/1bb574f2-6d84-4f89-869d-3036034941a1)
-you can see how much big is the txt file almost 64,000 lines! of matching.
-![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/11a89623-4e9d-4727-ba4c-b12a4fac5423)
-here we can see part two. and how we run it.
-![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/6451c6e7-cd31-475a-aece-54c56441a431)
 
+To search a lemma in the corpus to find its hypernyms enter:
+
+``` 
+ant run2 -Dargs="<First argument - The directory of the corpus> <Second argument - the lemma to search for>" 
+```
+for example:
+
+![img.png](img.png)
+
+that how the file look after run1:
+![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/1bb574f2-6d84-4f89-869d-3036034941a1)
+we can impress from how  big is the txt file almost 64,000 lines of matching!
+![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/11a89623-4e9d-4727-ba4c-b12a4fac5423)
+
+here we can see the result of run2:
+![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/6451c6e7-cd31-475a-aece-54c56441a431)
+we can see that the  program used the data and identified that "banana" is some food/crop.
+## Built With
+
+- Java
+
+
+## Author ##
+
+**Etai Wilentzik**
+
+- [Profile](https://github.com/EtaiWil )
+- [Email](mailto:etaiwil2000@gmail.com?subject=Hi "Hi!")
+- [LinkedIn](https://www.linkedin.com/in/etai-wilentzik-b5a106212/ "Welcome")
+
+## 🤝 Support
+
+Contributions, issues, and feature requests are welcome!
+
+Give a ⭐️ if you like this project!
