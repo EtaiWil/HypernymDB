@@ -1,12 +1,12 @@
 #HypernymDB
 
 ## Table of Contents
-## Table of Contents
 * [General Info](#general-information)
 * [Setup](#setup)
-* [Built With](#Built With)
-* [Contact](#contact)
-* [Support](#Support)
+* [Built With](#built-with)  <!-- Corrected anchor link -->
+* [Contact](#author)  <!-- Corrected anchor link -->
+* [Support](#support)  <!-- Corrected anchor link -->
+
 
 
 
