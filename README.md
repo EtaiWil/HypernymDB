@@ -6,15 +6,15 @@
 
 ## General Information
 This Java software uses Hearst patterns, a collection of lexical and syntactic patterns, to extract hypernym-hyponym links between noun phrases. Hearst patterns are used to identify hypernymy interactions. The computer extracts hypernym-hyponym pairs from a given text corpus by identifying Hearst patterns using regular expression matching and string manipulation techniques.
-the collection of words contain  5GB corpus which was edited before and added a <np> and </np> tags on every Noun Phrase,
+The collection of words contains  5GB corpus which was edited before and added a <np> and </np> tags on every Noun Phrase,
 then by using String manipulations (to optimize search) and regex matching of 5 different Hearst Patterns it creates a Database of Hypernyms and Hyponyms.
-for each Hyponym we count how many times it appeared in the corpus in different patterns.
+For each Hyponym we count how many times it appeared in the corpus in different patterns.
 
 The patterns I identified are ({} means optionally):
 
 1. `NP {,} such as NP {, NP, ..., {and|or} NP}`.
    In this pattern, the first NP is the hypernym and the NPs after the words "such as" are hyponyms.
-   Example: "semitic languages such as Hebrew or Arabic are composed of consonants and voyels"
+   Example: "semitic languages such as Hebrew or Arabic are composed of consonants and vowels"
    semitic language ⟶ Hebrew
    semitic language ⟶ Arabic
 
@@ -60,7 +60,7 @@ To run on a corpus and get the whole database into a file enter:
 ```
 ant run1 -Dargs="<First argument - The directory of the corpus> <Second argument- name for the new output file>"  
 ```
-for example:
+For example:
 
 ![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/b217be72-dfc7-4fc4-b3d2-4b14179f8db5)
 
@@ -69,18 +69,18 @@ To search a lemma in the corpus to find its hypernyms enter:
 ``` 
 ant run2 -Dargs="<First argument - The directory of the corpus> <Second argument - the lemma to search for>" 
 ```
-for example:
+For example:
 
 ![img.png](img.png)
 
-that how the file look after run1:
+That how the file look after run1:
 ![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/1bb574f2-6d84-4f89-869d-3036034941a1)
-we can impress from how  big is the txt file almost 64,000 lines of matching!
+We can impress from how  big is the txt file almost 64,000 lines of matching!
 ![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/11a89623-4e9d-4727-ba4c-b12a4fac5423)
 
-here we can see the result of run2:
+Here we can see the result of run2:
 ![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/6451c6e7-cd31-475a-aece-54c56441a431)
-we can see that the  program used the data and identified that "banana" is some food/crop.
+We can see that the  program used the data and identified that "banana" is some food/crop.
 ## Built With
 
 - Java
