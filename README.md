@@ -6,7 +6,7 @@
 
 ## General Information
 This Java software uses Hearst patterns, a collection of lexical and syntactic patterns, to extract hypernym-hyponym links between noun phrases. Hearst patterns are used to identify hypernymy interactions. The computer extracts hypernym-hyponym pairs from a given text corpus by identifying Hearst patterns using regular expression matching and string manipulation techniques.
-The collection of words contains  5GB corpus which was edited before and added a <np> and </np> tags on every Noun Phrase,
+The collection of words contains  5GB corpus which was edited before and added  <np> and </np> tags on every Noun Phrase,
 then by using String manipulations (to optimize search) and regex matching of 5 different Hearst Patterns it creates a Database of Hypernyms and Hyponyms.
 For each Hyponym we count how many times it appeared in the corpus in different patterns.
 
@@ -48,7 +48,7 @@ git clone https://github.com/EtaiWil/HypernymDB.git
 ```
 2. Download the corpus from [here](https://drive.google.com/file/d/1knTy0gYblqEZaSFWsHxk2NgOM59mwolP/view?usp=sharing)
 3. Download Apache Ant from [here](https://ant.apache.org/bindownload.cgi) to use the build file to compile and run the program.
-4. Open the terminal in the folder that contains the build files and the src folder and enter `ant clean ` then 
+4. Open the terminal in the folder that contains the build files and the src folder and enter `ant clean `  
  to compile:
 
 ```
@@ -90,7 +90,7 @@ We can see that the  program used the data and identified that "banana" is some 
 
 **Etai Wilentzik**
 
-- [Profile](https://github.com/EtaiWil )
+- [Profile](https://github.com/EtaiWilentzik )
 - [Email](mailto:etaiwil2000@gmail.com?subject=Hi "Hi!")
 - [LinkedIn](https://www.linkedin.com/in/etai-wilentzik-b5a106212/ "Welcome")
 
