@@ -81,7 +81,7 @@ We can impress from how  big is the txt file almost 64,000 lines of matching!
 Here we can see the result of run2:
 ![image](https://github.com/EtaiWil/HypernymDB/assets/117933094/6451c6e7-cd31-475a-aece-54c56441a431)
 We can see that the  program used the data and identified that "banana" is some food/crop.
-## Built With
+## Built with
 
 - Java
 
@@ -91,8 +91,7 @@ We can see that the  program used the data and identified that "banana" is some 
 **Etai Wilentzik**
 
 - [Profile](https://github.com/EtaiWilentzik )
-- [Email](mailto:etaiwil2000@gmail.com?subject=Hi "Hi!")
-- [LinkedIn](https://www.linkedin.com/in/etai-wilentzik-b5a106212/ "Welcome")
+- [LinkedIn]( https://www.linkedin.com/in/etai-wilentzik/ "Welcome")
 
 ## Support 🤝 
 
